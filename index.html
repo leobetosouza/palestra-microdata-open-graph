@@ -1,13 +1,25 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-br" itemscope itemtype="http://schema.org/Article">
 
 	<head>
 		<meta charset="utf-8">
 
-		<title>reveal.js - The HTML Presentation Framework</title>
+		<title>Dados sobre Dados: Microdata e Open Graph - Leonardo Alberto Souza</title>
 
-		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-		<meta name="author" content="Hakim El Hattab">
+		<meta itemprop="name" property="og:title" content="Dados sobre Dados: Microdata e Open Graph">
+		<meta itemprop="image" property="og:image" content="http://gravatar.com/avatar/da00e54f8aa22a44d97d6dae09a8b859?size=210">
+		<meta name="description" itemprop="description" property="og:description" content="Palestra sobre Metainformação na Web ministrada por Leonardo Alberto Souza (Leobetosouza) no #frontinsampa e no #frontinpoa em 2014">
+		<meta name="twitter:description" content="Palestra sobre Metainformação na Web ministrada por Leonardo Alberto Souza (@leobetosouza) no #frontinsampa e no #frontinpoa em 2014">
+		<meta name="author" content="Leonardo Alberto Souza (Leobetosouza)">
+		<meta property="fb:admins" content="642130836">
+		<meta property="fb:profile_id" content="642130836">
+		<meta property="article:author" content="642130836">
+		<meta property="og:type" content="article">
+
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:site" content="@leobetosouza">
+		<meta name="twitter:creator" content="@leobetosouza">
+		<meta name="twitter:domain" content="leobetosouza.com.br">
 
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -16,6 +28,16 @@
 
 		<link rel="stylesheet" href="css/reveal.min.css">
 		<link rel="stylesheet" href="css/theme/serif.css" id="theme">
+
+		<style>
+			.xoxomidia>*{
+			  vertical-align:top!important;
+			}
+			.xoxomidia iframe{
+			  display:inline-block;
+			  height:50px;
+			}
+		</style>
 
 		<!-- For syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -40,6 +62,14 @@
 
 		<div class="reveal">
 
+<!-- <div class="xoxomidia">
+	<iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fleobetosouza.com.br%2Fpalestra-microdata-open-graph%2F&amp;send=false&amp;layout=button_count&amp;width=100&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21&amp;appId=227254270657916" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150px; height:50px;" allowTransparency="true"></iframe>
+	
+	<div class="g-plusone" data-href="http://leobetosouza.com.br/palestra-microdata-open-graph/"></div>
+	
+	<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://leobetosouza.com.br/palestra-microdata-open-graph/" data-text="Dados sobre Dados: Microdata e Open Graph" data-via="leobetosouza" data-lang="pt" data-hashtags="frontinsampa frontinpoa">Tweetar</a>
+</div> -->
+
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 <section data-markdown data-separator="^\n---\n$" data-vertical="^\n---\n$">
@@ -52,7 +82,7 @@
 
 ## **Leonardo Alberto** Augusto de Jesus **Souza**
 * Estudante de **Sistemas de Informação** at **UFF**
-* **leobetosouza** at github|twitter|facebook|linkedin
+* **leobetosouza** at [github](http://github.com/leobetosouza)|[twitter](http://twitter.com/leobetosouza)|[facebook](https://facebook.com/leobetosouza)|[linkedin](http://br.linkedin.com/in/leobetosouza/)
 
 ---
 
@@ -331,7 +361,7 @@ words used on a particular occasion or in a particular sphere.
 ---
 
 # Muito Obrigado!
-@leobetosouza
+@[leobetosouza](http://twitter.com/leobetosouza)
 
 
 </script>
@@ -371,6 +401,30 @@ words used on a particular occasion or in a particular sphere.
 				]
 			});
 
+		</script>
+
+		<!-- <script type="text/javascript">
+		  window.___gcfg = {lang: 'pt-BR'};
+		  (function() {
+		    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+		    po.src = 'https://apis.google.com/js/plusone.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+		  })();
+		</script>
+
+		<script>
+			!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+		</script> -->
+
+		<script>
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-30138434-1']);
+			_gaq.push(['_trackPageview']);
+			(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
 		</script>
 
 	</body>
