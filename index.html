@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>reveal.js - The HTML Presentation Framework</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/serif.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+<section data-markdown data-separator="^\n---\n$" data-vertical="^\n---\n$">
+<script type="text/template">
+
+# Dados Sobre Dados
+(ou você deveria colocar *metainformação* no seu site)
+
+---
+
+## **Leonardo Alberto** Augusto de Jesus **Souza**
+* Estudante de **Sistemas de Informação** at **UFF**
+* **leobetosouza** at github|twitter|facebook|linkedin
+
+---
+
+### hy·per·text
+#### /ˈhīpərˌtekst/
+*noun*<br>
+a software system that **links topics** on the screen to **related information** and graphics.
+
+---
+
+### hy·per·link
+#### /ˈhīpərˌliNGk/
+*noun*<br>
+a link from a hypertext file or document to **another location or file**.
+
+---
+
+### in·for·ma·tion
+#### /ˌinfərˈmāSH(ə)n/
+*noun*<br>
+facts provided or learned about something or someone.
+*"a vital piece of information"*
+<br><br>
+*synonyms*: details, particulars, facts, figures, statistics, **data**;
+
+---
+
+### da·ta
+#### /ˈdadə,ˈdādə/
+*noun*<br>	
+COMPUTING<br>
+the quantities, characters, or symbols on which operations are performed by a computer, being stored and transmitted in the form of electrical signals and recorded on magnetic, optical, or mechanical recording media.
+<br><br>
+PHILOSOPHY<br>
+things known or assumed as **facts**, making the basis of reasoning or calculation.
+
+---
+
+### **met·a·da·ta**
+#### /ˈmedəˌdādə,ˈmedəˌdadə/
+*noun*<br>
+a set of data that **describes and gives information** about other data.
+
+---
+
+### se·man·tics
+#### /səˈman(t)iks/
+*noun*<br>
+the meaning of a word, phrase, sentence, or text.
+
+---
+
+### <code>&lt;title&gt;</code>
+defines the title of the document.
+
+---
+
+### <code>&lt;body&gt;</code>	
+represents the content of an HTML document.
+
+---
+
+### <code>&lt;blockquote&gt;</code>
+represents a content that is quoted from another source.
+
+---
+
+### <code>&lt;div&gt;</code>
+represents a generic container with **no special meaning**.
+
+---
+
+### <code>&lt;span&gt;</code>
+represents text with **no specific meaning**. This has to be used **when no other text-semantic element conveys an adequate meaning**	.
+
+---
+
+### <code>&lt;head&gt;</code>
+represents a collection of **metadata** about the document, including links to, or definitions of, scripts and style sheets.
+
+---
+
+### <code>&lt;meta&gt;</code>
+defines **metadata that can&apos;t be defined using another HTML element**.
+
+---
+
+## Semântica do HTML pode ser extendida!
+
+---
+
+## Microformats, RDFa, Microdata, Open Graph
+
+---
+
+## Microdata
+consists of a group of **name-value pairs**. The groups are called **items**, and each name-value pair is a **property**. Items and properties are represented by regular elements.
+
+---
+
+```html
+<div itemscope>
+    <p>Meu nome é <span itemprop="name">Leonardo</span>.</p>
+    <p>Eu estou no <span itemprop="place">Inferno</span>.</p>
+</div>
+```
+
+---
+
+## Linked Data
+in Semantic Web terminology, Linked Data is the term used to describe a method of exposing and connecting data on the Web from different sources.
+
+---
+
+### URL
+a Uniform Resource Locator, also known as a web address, is a **specific character string that constitutes a reference to a resource**.
+
+---
+
+```
+<article itemscope itemtype="http://schema.org/Person">
+	Meu nome é
+	<span itemprop="name">
+		<strong itemprop="givenName">Leonardo</strong>
+		<strong itemprop="additionalName">Alberto</strong>
+		Augusto de Jesus
+		<strong itemprop="familyName">Souza</strong>
+	</span>,
+	sou um
+	<strong itemprop="jobTitle">Desenvolvedor Web</strong>
+	e nasci, vivo e trabalho no
+	<span itemscope
+		itemprop="address homeLocation workLocation"
+		itemtype="http://schema.org/PostalAddress"
+	>
+		<strong itemprop="name addressLocality">Rio de Janeiro</strong>
+	</span>
+</article>
+```
+
+---
+
+### vo·cab·u·lar·y
+##### /vōˈkabyəˌlerē/
+*noun*<br>
+the body of words used in a particular language.<br><br>
+*synonyms*:	word power, lexicon, command of language;<br><br>
+words used on a particular occasion or in a particular sphere.
+
+---
+
+```
+<a href="/b/j-k-rowling/harry-potter-e-a-pedra-filosofal"
+    itemscope itemtype="http://schema.org/Book">
+    <link itemprop="additionalType" href="http://schema.org/SomeProducts">
+    <span itemprop="name">Harry Potter e a Pedra Filosofal</span>
+    <span itemprop="author">J. K. Rowling</span>
+    <b itemprop="inventoryLevel">195</b> exemplares em 98 vendedores
+    A partir de <strong>R$ 7,00</strong>
+    <span
+        itemprop="offers"
+        itemscope itemtype="http://schema.org/Offer"
+    ><span
+        itemprop="priceSpecification"
+        itemscope itemtype="http://schema.org/PriceSpecification">
+        <meta itemprop="priceCurrency" content="BRL">
+        <meta itemprop="minPrice" content="7.00">
+    </span></span>
+</a>
+```
+
+---
+
+```
+<link itemprop="acceptedPaymentMethod"
+	href="http://purl.org/goodrelations/v1#VISA">
+<link itemprop="acceptedPaymentMethod"
+	href="http://purl.org/goodrelations/v1#MasterCard">
+<link itemprop="acceptedPaymentMethod"
+	href="http://purl.org/goodrelations/v1#DinersClub">
+<link itemprop="acceptedPaymentMethod"
+	href="http://purl.org/goodrelations/v1#AmericanExpress">
+<link itemprop="acceptedPaymentMethod"
+	href="http://purl.org/goodrelations/v1#PayPal">	
+```
+
+---
+
+```
+<form method="GET" action="http://www.estantevirtual.com.br/busca"
+	itemprop="potentialAction"
+	itemscope itemtype="http://schema.org/SearchAction">
+        <meta itemprop="target"
+        	content="http://www.estantevirtual.com.br/busca?q={query}">
+        <input type="search" name="q" required>
+        <button type="submit">Buscar</button>
+</form>
+```
+
+---
+
+<code><pre>
+&lt;script type="application/ld+json"&gt;
+{
+    "@context": "http:&#47;&#47;schema&#46;org",
+    "@type": "WebSite",
+    "url": "http:&#47;&#47;www&#46;estantevirtual&#46;com&#46;br/",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "http:&#47;&#47;www&#46;estantevirtual&#46;com&#46;br/busca?q={query}",
+      "query-input": "required"
+    }
+}
+&lt;/script&gt;
+</code></pre>
+
+---
+
+## HTML5 Microdata API 
+`document.getItems()`
+
+---
+
+## Open Graph Protocol
+
+---
+
+* Inserir outras páginas dentro do Facebook (social graph)
+* Não quebrar serviços de terceiros (Google?)
+* Ser fácil
+
+---
+
+```
+<title>Seu Título Legal | buzzword, buzzword, buzzword | Seu Site</title>
+<meta property="og:title" content="Seu Titulo Legal | Seu Site">
+```
+
+---
+
+```
+<meta name="description" content="Sua descrição padrão">
+<meta property="og:description" content="Sua descrição pro facebook">
+```
+
+---
+
+```
+<meta name="description" content="Sua descrição padrao">
+<meta property="og:description" content="Sua descrição pro facebook">
+<meta name="twitter:description" content="Sua descrição pro twitter">
+```
+
+---
+
+```
+<link rel="canonical" href="http://seusite.com.br/">
+<meta property="og:url" content="http://seusite.com.br/?rel=og">
+```
+
+---
+
+```
+<meta property="og:type" content="product">
+<meta property="og:type" content="book">
+```
+
+---
+
+## Exemplos e Ferramentas
+
+---
+
+# Perguntas?
+
+---
+
+# Muito Obrigado!
+@leobetosouza
+
+
+</script>
+</section>
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
