@@ -87,6 +87,28 @@
 
 ---
 
+```json
+{
+    "@context" : "http://schema.org",
+    "@type" : "Person",
+    "name" : "Leonardo Alberto Augusto de Jesus Souza",
+    "worksFor" : {
+        "@type" : "Organization",
+        "name" : "Grupo WPensar",
+        "url" : "http://wpensar.com.br"
+    },
+    "jobTitle" : "Lead Developer",
+    "alumniOf" : {
+        "@type" : "EducationalOrganization",
+        "name" : "UFF",
+        "url" : "http://uff.br"
+    },
+
+}
+```
+
+---
+
 ### hy·per·text
 #### /ˈhīpərˌtekst/
 *noun*<br>
@@ -339,12 +361,12 @@ words used on a particular occasion or in a particular sphere.
 <code><pre>
 &lt;script type="application/ld+json"&gt;
 {
-    "@context": "http:&#47;&#47;schema&#46;org",
+    "@context": "http://schema.org",
     "@type": "WebSite",
-    "url": "http:&#47;&#47;www&#46;seusite&#46;com&#46;br/",
+    "url": "http://www.seusite.com.br/",
     "potentialAction": {
       "@type": "SearchAction",
-      "target": "http:&#47;&#47;www&#46;seusite&#46;com&#46;br/busca?q={query}",
+      "target": "http://www.seusite.com.br/busca?q={query}",
       "query-input": "required"
     }
 }
@@ -356,7 +378,7 @@ words used on a particular occasion or in a particular sphere.
 
 ```json
 {
-    "@context": "http:&#47;&#47;schema&#46;org",
+    "@context": "http://schema.org",
     "@type" : "Person",
     "name" : "Leonardo Alberto Augusto de Jesus Souza",
     "givenName" : "Leonardo",
