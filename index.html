@@ -81,6 +81,7 @@
 ---
 
 ## **Leonardo Alberto** Augusto de Jesus **Souza**
+* Lead developer do [Wello](http://wello.com.br) at [WPensar](htttp://wpensar.com.br)
 * Estudante de **Sistemas de Informação** at **UFF**
 * **leobetosouza** at [github](http://github.com/leobetosouza)|[twitter](http://twitter.com/leobetosouza)|[facebook](https://facebook.com/leobetosouza)|[linkedin](http://br.linkedin.com/in/leobetosouza/)
 
@@ -186,8 +187,25 @@ consists of a group of **name-value pairs**. The groups are called **items**, an
 ```html
 <div itemscope>
     <p>Meu nome é <span itemprop="name">Leonardo</span>.</p>
-    <p>Eu estou no <span itemprop="place">Inferno</span>.</p>
+    <p>Eu estou na <span itemprop="place">UniRio</span>.</p>
 </div>
+```
+
+---
+
+
+```html
+<div itemscope>
+    <p>Meu nome é <span itemprop="name">Leonardo</span>.</p>
+    <p>Eu estou na <span itemprop="place">UniRio</span>.</p>
+</div>
+```
+
+```json
+{
+    "name"  : "Leonardo",
+    "place" : "UniRio"
+}
 ```
 
 ---
@@ -212,15 +230,49 @@ a Uniform Resource Locator, also known as a web address, is a **specific charact
 		<strong itemprop="familyName">Souza</strong>
 	</span>,
 	sou um
-	<strong itemprop="jobTitle">Desenvolvedor Web</strong>
-	e nasci, vivo e trabalho no
+	<strong itemprop="jobTitle">Desenvolvedor Web</strong>,
+	vivo e trabalho em
 	<span itemscope
-		itemprop="address homeLocation workLocation"
+		itemprop="address workLocation"
 		itemtype="http://schema.org/PostalAddress"
 	>
-		<strong itemprop="name addressLocality">Rio de Janeiro</strong>
+		<strong itemprop="name addressLocality">Niterói</strong>
 	</span>
+    e sou pai do
+    <span itemscope
+        itemprop="children"
+        itemtype="http://schema.org/Person"
+    >
+        <strong itemprop="name givenName">Bruno</strong>
+    </span>
 </article>
+```
+
+---
+
+```json
+{
+    "itemtype" : "http://schema.org/Person",
+    "name" : "Leonardo Alberto Augusto de Jesus Souza",
+    "givenName" : "Leonardo",
+    "additionalName" : "Alberto",
+    "familyName" : "Souza",
+    "jobTitle" : "Desenvolvedor Web",
+    "address" : {
+        "itemtype" : "http://schema.org/PostalAddress",
+        "name" : "Niterói"
+    },
+    "workLocation" : {
+        "itemtype" : "http://schema.org/PostalAddress",
+        "name" : "Niterói"
+    },
+    "children" : {
+        "itemtype" : "http://schema.org/Person",
+        "name" : "Bruno",
+        "givenName" : "Bruno"
+    }
+}
+
 ```
 
 ---
@@ -235,7 +287,7 @@ words used on a particular occasion or in a particular sphere.
 ---
 
 ```
-<a href="/b/j-k-rowling/harry-potter-e-a-pedra-filosofal"
+<a href="/p/j-k-rowling/harry-potter-e-a-pedra-filosofal"
     itemscope itemtype="http://schema.org/Book">
     <link itemprop="additionalType" href="http://schema.org/SomeProducts">
     <span itemprop="name">Harry Potter e a Pedra Filosofal</span>
@@ -272,11 +324,11 @@ words used on a particular occasion or in a particular sphere.
 ---
 
 ```
-<form method="GET" action="http://www.estantevirtual.com.br/busca"
+<form method="GET" action="http://www.seusite.com.br/busca"
 	itemprop="potentialAction"
 	itemscope itemtype="http://schema.org/SearchAction">
         <meta itemprop="target"
-        	content="http://www.estantevirtual.com.br/busca?q={query}">
+        	content="http://www.seusite.com.br/busca?q={query}">
         <input type="search" name="q" required>
         <button type="submit">Buscar</button>
 </form>
@@ -289,15 +341,46 @@ words used on a particular occasion or in a particular sphere.
 {
     "@context": "http:&#47;&#47;schema&#46;org",
     "@type": "WebSite",
-    "url": "http:&#47;&#47;www&#46;estantevirtual&#46;com&#46;br/",
+    "url": "http:&#47;&#47;www&#46;seusite&#46;com&#46;br/",
     "potentialAction": {
       "@type": "SearchAction",
-      "target": "http:&#47;&#47;www&#46;estantevirtual&#46;com&#46;br/busca?q={query}",
+      "target": "http:&#47;&#47;www&#46;seusite&#46;com&#46;br/busca?q={query}",
       "query-input": "required"
     }
 }
 &lt;/script&gt;
 </code></pre>
+
+---
+
+
+```json
+{
+    "@context": "http:&#47;&#47;schema&#46;org",
+    "@type" : "Person",
+    "name" : "Leonardo Alberto Augusto de Jesus Souza",
+    "givenName" : "Leonardo",
+    "additionalName" : "Alberto",
+    "familyName" : "Souza",
+    "jobTitle" : "Desenvolvedor Web",
+    "address" : {
+        "@type" : "PostalAddress",
+        "name" : "Niterói"
+    },
+    "workLocation" : {
+        "@type" : "PostalAddress",
+        "name" : "Niterói"
+    },
+    "children" : {
+        "type" : "Person",
+        "name" : "Bruno",
+        "givenName" : "Bruno"
+    }
+}
+
+```
+
+---
 
 ---
 
@@ -361,6 +444,7 @@ words used on a particular occasion or in a particular sphere.
 ---
 
 # Muito Obrigado!
+###[bit.ly/metadados](http://bit.ly/metadados)
 @[leobetosouza](http://twitter.com/leobetosouza)
 
 
